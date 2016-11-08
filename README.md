@@ -6,8 +6,8 @@ To ensure the best results, include all the default material below and then cust
 
 ////////TEMPLATES
 
-
 To call a CTA, include this code in your template wherever you wish the CTA to appear. Ensure that the post or page using that template has a CTA relationship field created. The only data you need to change below is YOUR_RELATIONSHIP_FIELD. 
+```
 		
 		<?php 
 
@@ -44,12 +44,12 @@ To call a CTA, include this code in your template wherever you wish the CTA to a
 		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 		    
 		<?php endif; ?>
-		
+	```	
 		
 ////////Partials
 
 Ensure your theme has a partials folder containing a cta-block.php file with the following data:
-
+```
 <?php
 /**
  * @package _rebase
@@ -76,13 +76,14 @@ $img = get_field('cta_background_image');
 	</a>
 	
 </div>
-
+```
 
 ////////ACF
 
 
 The following code should be used for your CTA ACF.
 
+```
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
@@ -305,7 +306,7 @@ acf_add_local_field_group(array (
 ));
 
 endif;
-
+```
 
 
 
