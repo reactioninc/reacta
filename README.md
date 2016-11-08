@@ -44,7 +44,7 @@ To call a CTA, include this code in your template wherever you wish the CTA to a
 		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 		    
 		<?php endif; ?>
-	```	
+```	
 		
 ////////Partials
 
