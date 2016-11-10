@@ -74,24 +74,31 @@ $img = get_field('cta_background_image');
 
 	} else { 
 
-		$link = '#';
+		$link = 'null';
 
 	}
-
 
 ?>
 
 
 <div class="cta-block" style="background-image:url(<?php echo $img;?>);">
 	
-	<a href="<?php echo $link;?>">
+	<?php if($link == 'null'){
+		} else { ?>
+			<a href="<?php echo $link;?>">
+	<?php }?>
 	
 	<h2><?php echo $heading;?><span class="sub-heading"><?php echo $sub_heading;?></span></h2>
 	<p class="lead"><?php echo $content;?></p>
 	
-	</a>
+	
+	<?php if($link == 'null'){
+		} else { ?>
+			</a>
+	<?php }?>
 	
 </div>
+
 ```
 
 ////////ACF
@@ -185,7 +192,7 @@ acf_add_local_field_group(array (
 			'name' => 'cta_link_type',
 			'type' => 'radio',
 			'instructions' => 'Choose the type of link this will be',
-			'required' => 1,
+			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
 				'width' => '',
@@ -196,10 +203,10 @@ acf_add_local_field_group(array (
 				'internal_link' => 'Internal URL (for links inside your website)',
 				'external_link' => 'External URL (for links outside your website)',
 			),
-			'allow_null' => 0,
+			'allow_null' => 1,
 			'other_choice' => 0,
 			'save_other_choice' => 0,
-			'default_value' => 'internal_link',
+			'default_value' => '',
 			'layout' => 'horizontal',
 			'return_format' => 'value',
 		),

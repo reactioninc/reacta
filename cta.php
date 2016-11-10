@@ -73,10 +73,29 @@
 
   // Output Columns
   function cta_cpt_custom_columns_output( $column_name, $post_ID ) {
+	  
+	 	$link_type = get_field('cta_link_type');
 
-    if ($column_name == 'cta_link') {
-        echo get_field('cta_link');
+	    if ($column_name == 'cta_link') {
+		    
+		    	if( $link_type == 'internal_link') { 
+	
+			$link = get_field('cta_link_internal');
+	
+		} else if( $link_type == 'external_link') {
+	
+			$link = get_field('cta_link_external');
+	
+		} else { 
+	
+			$link = '';
+	
+		}
+
+	    
+        echo $link;
+        
     }
   }
-
+  
   add_action('manage_cta_posts_custom_column', 'cta_cpt_custom_columns_output', 10, 2);
