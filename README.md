@@ -60,8 +60,24 @@ Ensure your theme has a partials folder containing a cta-block.php file with the
 $heading = get_field('cta_heading');
 $sub_heading = get_field('cta_sub_heading');
 $content = get_field('cta_content');
-$link = get_field('cta_link');
+$link_type = get_field('cta_link_type');
 $img = get_field('cta_background_image');
+
+	
+	if( $link_type == 'internal_link') { 
+
+		$link = get_field('cta_link_internal');
+
+	} else if( $link_type == 'external_link') {
+
+		$link = get_field('cta_link_external');
+
+	} else { 
+
+		$link = '#';
+
+	}
+
 
 ?>
 
