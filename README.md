@@ -165,10 +165,10 @@ acf_add_local_field_group(array (
 		),
 		array (
 			'key' => 'field_582217c8a07b2',
-			'label' => 'Link',
-			'name' => 'cta_link',
-			'type' => 'text',
-			'instructions' => 'Add the URL where this CTA should take the user when clicked. Add the full url, or use [blogurl] followed by your page slug. For example, to send people to the about page, you would type [blogurl]about',
+			'label' => 'Link Type',
+			'name' => 'cta_link_type',
+			'type' => 'radio',
+			'instructions' => 'Choose the type of link this will be',
 			'required' => 1,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -176,11 +176,69 @@ acf_add_local_field_group(array (
 				'class' => '',
 				'id' => '',
 			),
+			'choices' => array (
+				'internal_link' => 'Internal URL (for links inside your website)',
+				'external_link' => 'External URL (for links outside your website)',
+			),
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'save_other_choice' => 0,
+			'default_value' => 'internal_link',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+		),
+		array (
+			'key' => 'field_5824dfd9fbc57',
+			'label' => 'External URL',
+			'name' => 'cta_link_external',
+			'type' => 'url',
+			'instructions' => 'Add the URL where this CTA should take the user when clicked.',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_582217c8a07b2',
+						'operator' => '==',
+						'value' => 'external_link',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
 			'default_value' => '',
 			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
+		),
+		array (
+			'key' => 'field_5824e1497397b',
+			'label' => 'Internal URL',
+			'name' => 'cta_link_internal',
+			'type' => 'page_link',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => array (
+				array (
+					array (
+						'field' => 'field_582217c8a07b2',
+						'operator' => '==',
+						'value' => 'internal_link',
+					),
+				),
+			),
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => array (
+			),
+			'taxonomy' => array (
+			),
+			'allow_null' => 0,
+			'allow_archives' => 0,
+			'multiple' => 0,
 		),
 		array (
 			'key' => 'field_582218a5fdd73',
