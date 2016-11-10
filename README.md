@@ -167,8 +167,8 @@ acf_add_local_field_group(array (
 			'key' => 'field_582217c8a07b2',
 			'label' => 'Link',
 			'name' => 'cta_link',
-			'type' => 'url',
-			'instructions' => 'Add the URL where this CTA should take the user when clicked.',
+			'type' => 'text',
+			'instructions' => 'Add the URL where this CTA should take the user when clicked. Add the full url, or use [blogurl] followed by your page slug. For example, to send people to the about page, you would type [blogurl]about',
 			'required' => 1,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -178,6 +178,9 @@ acf_add_local_field_group(array (
 			),
 			'default_value' => '',
 			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
 		),
 		array (
 			'key' => 'field_582218a5fdd73',
