@@ -1,0 +1,278 @@
+[
+    {
+        "key": "group_5820e2bea5e9f",
+        "title": "Call to Action",
+        "fields": [
+            {
+                "key": "field_5822174336433",
+                "label": "CTA Content",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5822175f36434",
+                "label": "Heading",
+                "name": "cta_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5822176b36435",
+                "label": "Sub Heading",
+                "name": "cta_sub_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_58221799a07b1",
+                "label": "Content",
+                "name": "cta_content",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": "wpautop"
+            },
+            {
+                "key": "field_582217c8a07b2",
+                "label": "Link Type",
+                "name": "cta_link_type",
+                "type": "radio",
+                "instructions": "Choose the type of link this will be",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "internal_link": "Internal URL (for links inside your website)",
+                    "external_link": "External URL (for links outside your website)"
+                },
+                "allow_null": 1,
+                "other_choice": 0,
+                "save_other_choice": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_5824dfd9fbc57",
+                "label": "External URL",
+                "name": "cta_link_external",
+                "type": "url",
+                "instructions": "Add the URL where this CTA should take the user when clicked.",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_582217c8a07b2",
+                            "operator": "==",
+                            "value": "external_link"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5824e1497397b",
+                "label": "Internal URL",
+                "name": "cta_link_internal",
+                "type": "page_link",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_582217c8a07b2",
+                            "operator": "==",
+                            "value": "internal_link"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [],
+                "taxonomy": [],
+                "allow_null": 0,
+                "allow_archives": 0,
+                "multiple": 0
+            },
+            {
+                "key": "field_582218a5fdd73",
+                "label": "Background Image",
+                "name": "cta_background_image",
+                "type": "image",
+                "instructions": "Choose an image for the background of your CTA",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": 1,
+                "mime_types": ""
+            },
+            {
+                "key": "field_582216691aa82",
+                "label": "Layout Options",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_582215a01aa81",
+                "label": "Layout",
+                "name": "cta_layout",
+                "type": "radio",
+                "instructions": "Choose your layout. By default, your Call to Action will include the general fields and styles created for the CTA section. <br \/>\r\n<strong>Please note: Custom HTML layouts are for developers only.<\/strong>",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "default": "Default",
+                    "custom_html": "Custom HTML"
+                },
+                "allow_null": 0,
+                "other_choice": 0,
+                "save_other_choice": 0,
+                "default_value": "default",
+                "layout": "horizontal",
+                "return_format": "value"
+            },
+            {
+                "key": "field_5822167d1aa83",
+                "label": "Partial Name",
+                "name": "cta_partial_name",
+                "type": "text",
+                "instructions": "Add the get_template_part partial location for the custom CTA (assumes file begins with cta-).",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_582215a01aa81",
+                            "operator": "==",
+                            "value": "custom_html"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "block",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "cta"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content",
+            "excerpt",
+            "custom_fields",
+            "discussion",
+            "comments",
+            "slug",
+            "author",
+            "format",
+            "page_attributes",
+            "featured_image",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": 1,
+        "description": ""
+    }
+]
